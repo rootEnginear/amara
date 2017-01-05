@@ -1,4 +1,4 @@
 # Amara
 Learn basic programming with Thai command.
 
-One of the major problem when Thais try to program is, they don't acually know what they are writing. Because of that, we are going to try to translate most of the basic command in JavaScript into Thai, and make the syntax as much easy as we could.
+One of the major problem when Thais try to program is, they don't actually know what they are writing. Because of that, we are going to try to translate most of the basic javascript function into Thai, and make the syntax as much easy as we could.
