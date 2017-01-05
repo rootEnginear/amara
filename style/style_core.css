@@ -1,0 +1,26 @@
+body {
+  padding-top: 50px;
+  font-family: 'Prompt', sans-serif;
+  padding-bottom: 70px;
+}
+
+a.norm:focus, a.norm:hover {
+  text-decoration: none;
+  border-bottom: #23527c dotted 1px;
+}
+
+.background {
+  background-image: url("../img/bg02.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.whiteBG {
+  margin-top: -5px;
+  background-color: white;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 3px;
+  border: 1px #ddd solid;
+}

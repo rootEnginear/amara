@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    padding-top: 70px;
+}
+
+#codeArea {
+    font-family: 'Inconsolata', 'Maitree',monospace;
+    color: #383a42;
+}
+
+#codeInput {
+    height: 100%;
+    overflow-y: auto;
+    font-size: 1.5em;
+}
+
+#codeInput div {
+  font-size: 1em;
+  border: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+#codeOutput {
+    height: 100%;
+    overflow-y: auto;
+    font-size: 1.5em;
+}
+
+.variable { /* ตัวแปรที่ผ่านการ var */
+  color: #e45649;
+}
+
+.baseFunction { /* ฟังค์ชั่นหลัก */
+  color: #a626a4;
+}
+
+.function { /* ฟังค์ชั่นอื่นที่มี () ตามหลัง */
+  color: #4078f2;
+}
+
+.comment { /* ข้อความภายใต้เครื่องหมาย /* *\/ หรือหลังเครื่องหมาย // */
+  color: #a0a1a7;
+  font-style: oblique;
+}
+
+.blockquote { /* ข้อความภายใต้เครื่องหมาย '...' หรือ "..." */
+  color: #50a14f;
+}
+
+.boolean { /* true false */
+  color: #986801;
+}
+
+.warning { /* คำสงวน */
+  background-color: #ca1243;
+  color: white;
+}
