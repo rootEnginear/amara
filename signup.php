@@ -21,25 +21,25 @@
   <div class="container whiteBG">
     <div class="row">
       <div class="col-xs-12">
-        <form class="form-horizontal">
+        <form class="form-horizontal" action="action/authAction.php" method="post">
           <div class="form-group">
             <label for="authUsername" class="col-sm-2 control-label">ชื่อผู้ใช้</label>
             <div class="col-sm-8">
-              <input type="text" class="form-control" id="authUsername" placeholder="ชื่อผู้ใช้">
+              <input type="text" class="form-control" name="authUsername" id="authUsername" placeholder="ชื่อผู้ใช้">
             </div>
           </div>
 
           <div class="form-group">
             <label for="authPassword" class="col-sm-2 control-label">รหัสผ่าน</label>
             <div class="col-sm-8">
-              <input type="password" class="form-control" id="authPassword" placeholder="รหัสผ่าน">
+              <input type="password" class="form-control" name="authPassword" id="authPassword" placeholder="รหัสผ่าน">
             </div>
           </div>
 
           <div class="form-group">
             <label for="authEmail" class="col-sm-2 control-label">อีเมล</label>
             <div class="col-sm-8">
-              <input type="email" class="form-control" id="authEmail" placeholder="อีเมล">
+              <input type="email" class="form-control" name="authEmail" id="authEmail" placeholder="อีเมล">
             </div>
           </div>
 
@@ -47,7 +47,7 @@
 
           <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-              <button type="submit" class="btn btn-primary" aria-describedby="helpBlock">สมัครสมาชิก</button>
+              <button type="submit" class="btn btn-primary" name="authSignup" aria-describedby="conditionRegis">สมัครสมาชิก</button>
               <span id="conditionRegis" class="help-block">ในการสมัครสมาชิกนี้ ถือว่าคุณได้ยอมรับใน<a class="norm" href="#">ข้อตกลงและเงื่อนไขการใช้ Amara</a> แล้ว</span>
             </div>
           </div>
