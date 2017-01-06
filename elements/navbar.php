@@ -21,7 +21,7 @@
         <li id="navTranslate" class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-exchange" aria-hidden="true"></i> แปลภาษา <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li class="disabled"><a href="codeLua.php">อมรา <i class="fa fa-angle-right" aria-hidden="true"></i> Lua <!--<span class="label label-danger">Alpha</span>--></a></li>
+            <li class="disabled"><a href="#">อมรา <i class="fa fa-angle-right" aria-hidden="true"></i> Lua <!--<span class="label label-danger">Alpha</span>--></a></li>
             <li class="disabled"><a href="#">อมรา <i class="fa fa-angle-right" aria-hidden="true"></i> Python</a></li>
             <li class="disabled"><a href="#">อมรา <i class="fa fa-angle-right" aria-hidden="true"></i> Ruby</a></li>
             <!--
