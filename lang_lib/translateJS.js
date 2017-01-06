@@ -1,7 +1,7 @@
 var i = 0;
 
 function translateCode(codeInput,displayIo,stdIo) {
-    var codeTemp = codeInput;
+    var codeTemp = codeInput; // get innerText
 
     /* ; */
     codeTemp = codeTemp.replace(/;/g, ";<br>");
@@ -104,5 +104,5 @@ function translateCode(codeInput,displayIo,stdIo) {
       codeTemp = codeTemp.replace(/input\(\)/g, "window\.prompt\(\"\", \"\"\)");
     }
 
-    return codeTemp;
+    return codeTemp; // return innerHTML
 }

@@ -69,14 +69,14 @@
       <div class="modal-body">
         <form action="auth/authAction.php" method="post">
           <div class="form-group">
-            <label for="loginEmail">อีเมล</label>
-            <input type="email" class="form-control" id="loginEmail" placeholder="อีเมล">
+            <label for="loginEmail">ชื่อผู้ใช้/อีเมล</label>
+            <input type="email" class="form-control" name="authUsername" id="loginEmail" placeholder="ชื่อผู้ใช้/อีเมล">
           </div>
           <div class="form-group">
             <label for="loginPassword">รหัสผ่าน</label>
-            <input type="password" class="form-control" id="loginPassword" placeholder="รหัสผ่าน">
+            <input type="password" class="form-control" name="authPassword" id="loginPassword" placeholder="รหัสผ่าน">
           </div>
-          <button type="submit" class="btn btn-primary btn-block">เข้าสู่ระบบ</button>
+          <button type="submit" class="btn btn-primary btn-block"  name="authLogin">เข้าสู่ระบบ</button>
         </form>
       </div>
       <div class="modal-footer">
