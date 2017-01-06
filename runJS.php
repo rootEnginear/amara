@@ -17,8 +17,7 @@
       <div class="col-xs-12 text-center" style="color:white; font-family: 'Prompt', sans-serif; padding-top: 70px; font-size:5em">
         <i class="fa fa-cog fa-spin" style="font-size:5em;"></i><br>
         กำลังรัน <i class="fa fa-code" aria-hidden="true"></i><br>
-        <small style="font-size:2rem; position:relative; top:-48px;">หน้าต่างนี้จะปิดโดยอัตโนมัติถ้าหากไม่มีความผิดพลาด</small><br>
-        <small style="font-size:1.2rem; position:relative; top:-128px;">Powered by ES5 strict</small>
+        <small style="font-size:2rem; position:relative; top:-48px;">หน้าต่างนี้จะปิดโดยอัตโนมัติถ้าหากไม่มีความผิดพลาด</small>
       </div>
     </div>
   </div>

@@ -21,7 +21,7 @@
       <div class="container">
 
       <div class="row">
-        <div class="col-sm-10 col-md-offset-1" id="title_anim">
+        <div class="col-sm-11 col-md-offset-1" id="title_anim">
           <h1>"อมรา" <small>เรียนเขียนโปรแกรมง่ายๆ ผ่านคำสั่งภาษาไทย</small></h1>
         </div>
       </div>

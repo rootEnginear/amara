@@ -1,9 +1,9 @@
 <?php
 include_once "connect.php";
-
-#   S I G N   U P
-
 if($_POST['authSignup']){
+
+  #   S I G N   U P
+
   $username = $_POST['authUsername'];
   $password = md5($_POST['authPassword']);
   $email = $_POST['authEmail'];
@@ -20,11 +20,10 @@ if($_POST['authSignup']){
   </script>
   <?
   exit;
-}
+}elseif ($_POST['authForget']){
 
-#   F O R G E T   P A S S W O R D
+  #   F O R G E T   P A S S W O R D
 
-if($_POST['authForget']){
   $email = $_POST['authEmail'];
   $sql = "SELECT * FROM member WHERE email='$email'";
   $c = mysql_db_query($db_name,$sql);
@@ -63,6 +62,31 @@ if($_POST['authForget']){
   </script>
   <?
   exit;
+}elseif($_POST['authLogin']){
+
+  #   L O G   I N
+
+  $username = $_POST['authUsername']; // This included email too.
+  $password = md5($_POST['authPassword']);
+  $sql = "SELECT * FROM member WHERE (username='$username' or email='$username') and password='$password'";
+  $c = mysql_db_query($db_name,$sql);
+  if(!$c){
+    # Cannot Connect
+    exit;
+  }
+
+  $row = mysql_num_rows($c);
+  if($row==0){
+    # No User
+    exit;
+  }
+
+  $record = mysql_fetch_array($c);
+
+  session_start();
+  $_SESSION['sess_id'] = session_id();
+  $_SESSION['sess_user'] = $record['username'];
+  $_SESSION['sess_pos'] = $record['pos'];
 }
 
 ?>
