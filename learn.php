@@ -5,6 +5,15 @@
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Maitree" rel="stylesheet">
   <link rel="stylesheet" href="style/style_core.css">
   <link rel="stylesheet" href="style/style_learn.css">
+  <script src="lang_lib/translateJS.js"></script>
+  <script>
+    function runCode(codeId){
+      // raw code from codeId get translate and put into codeOutput and then copy innerText to codeHidden and then run.
+      var inputCode = document.getElementById(codeId);
+      var tempCode = document.getElementById('codeHidden');
+      tempCode = translateCode(inputCode);
+    }
+  </script>
 </head>
 <body class="background">
   <? include_once "elements/navbar.php" ?>
@@ -50,24 +59,24 @@
           <div class="panel-body">
             <p>
               &emsp;พื้นฐานแรกที่ทุกคนจะได้เรียนรู้เมื่อเขียนโปรแกรม คือการแสดงค่าออกมาทางหน้าจอ โดยสามารถให้ "อมรา" แสดงข้อความออกมาทางหน้าจอได้โดยการพิมพ์คำสั่ง <code>แสดง("ข้อความ");</code> เช่น<br>
-              <div class="input-group input-group-lg" id="control_anim">
-                <input id="exampleCode" type="text" class="form-control" placeholder='แสดง("ข้อความ");' value='แสดง("อมรา");'>
+              <div class="input-group">
+                <input id="code00" type="text" class="form-control" placeholder='แสดง("ข้อความ");' value='แสดง("อมรา");'>
                 <span class="input-group-btn">
-                  <button class="btn btn-primary" type="button" onclick="displayName();">Run <i class="fa fa-play" aria-hidden="true"></i></button>
+                  <button class="btn btn-primary" type="button" onclick="runCode(code00);">Run <i class="fa fa-play" aria-hidden="true"></i></button>
                 </span>
               </div><br>
               &emsp;ในกรณีที่เราต้องการให้แสดงข้อความหลายบรรทัด เราสามารถใช้คำสั่ง <code>\n</code> เพื่อให้แสดงข้อความอีกบรรทัดได้ เช่น<br>
-              <div class="input-group input-group-lg" id="control_anim">
-                <input id="exampleCode" type="text" class="form-control" placeholder='แสดง("ข้อความ \n ข้อความ");' value='แสดง("สวัสดี \n อมรา");'>
+              <div class="input-group">
+                <input id="code01" type="text" class="form-control" placeholder='แสดง("ข้อความ \n ข้อความ");' value='แสดง("สวัสดี \n อมรา");'>
                 <span class="input-group-btn">
-                  <button class="btn btn-primary" type="button" onclick="displayName();">Run <i class="fa fa-play" aria-hidden="true"></i></button>
+                  <button class="btn btn-primary" type="button" onclick="runCode(code01);">Run <i class="fa fa-play" aria-hidden="true"></i></button>
                 </span>
               </div><br>
               &emsp;โดยปกติแล้ว " ' และ \ เป็นตัวอักษรพิเศษสำหรับคอมพิวเตอร์ ถ้าหากเราต้องการแสดง ตัวอักษร " ' และ \ เราสามารถพิมพ์ในลักษณะ <code>\"</code> <code>\'</code> และ <code>\\</code> ได้ เช่น<br>
-              <div class="input-group input-group-lg" id="control_anim">
-                <input id="exampleCode" type="text" class="form-control" placeholder='แสดง("");' value='แสดง("");'>
+              <div class="input-group">
+                <input id="code02" type="text" class="form-control" placeholder='แสดง(" \&#39; \&quot; \\ ");' value='แสดง(" \&#39; \&quot; \\ ");'>
                 <span class="input-group-btn">
-                  <button class="btn btn-primary" type="button" onclick="displayName();">Run <i class="fa fa-play" aria-hidden="true"></i></button>
+                  <button class="btn btn-primary" type="button" onclick="runCode(code02);">Run <i class="fa fa-play" aria-hidden="true"></i></button>
                 </span>
               </div><br>
             </p>
@@ -105,6 +114,10 @@
       </div>
     </div>
   </div>
+
+  <!-- All the magic happens here... -->
+  <div id="codeOutput" style="display:none;"></div>
+  <input type="hidden" name="codeHidden" id="codeHidden">
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
