@@ -36,11 +36,11 @@
   }
 
   function input(text){
-    return window.prompt(text, "");
+    return prompt(text, "");
   }
 
   function output(text){
-    window.alert(text);
+    alert(text);
   }
 
   main();

@@ -87,7 +87,7 @@
   </div>
 </div>
 
-<nav id="navbarFooter" class="navbar navbar-default navbar-fixed-bottom">
+<nav id="navbarFooter" class="navbar navbar-default navbar-fixed-bottom hidden-xs">
   <div class="container">
     <p class="navbar-text navbar-right">Copyright &copy; <?php date_default_timezone_set("Asia/Bangkok"); echo date("Y"); ?> "kruchotika.com" All right reserved.</p>
   </div>

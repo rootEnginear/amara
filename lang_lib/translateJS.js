@@ -1,6 +1,6 @@
 var i = 0;
 
-function translateCode(codeInput,displayIo,stdIo) {
+function translateCode(codeInput,displayIo = false,stdIo = false) {
     var codeTemp = codeInput; // get innerText
 
     /* ; */
@@ -95,13 +95,13 @@ function translateCode(codeInput,displayIo,stdIo) {
     codeTemp = codeTemp.replace(/#false/g, "เท็จ");
 
     if(displayIo == true){
-      codeTemp += '<br>function input(text){<br>return window.prompt(text, "");<br>}<br><br>function output(text){<br>window.alert(text);<br>}';
+      codeTemp += '<br>function input(text){<br>return prompt(text, "");<br>}<br><br>function output(text){<br>alert(text);<br>}';
     }
 
     if(stdIo == true){
-      codeTemp = codeTemp.replace(/output\(/g, "window.alert\(");
-      codeTemp = codeTemp.replace(/input\((".*?")\)/g, "window\.prompt\($1, \"\"\)");
-      codeTemp = codeTemp.replace(/input\(\)/g, "window\.prompt\(\"\", \"\"\)");
+      codeTemp = codeTemp.replace(/output\(/g, "alert\(");
+      codeTemp = codeTemp.replace(/input\((".*?")\)/g, "prompt\($1, \"\"\)");
+      codeTemp = codeTemp.replace(/input\(\)/g, "prompt\(\"\", \"\"\)");
     }
 
     return codeTemp; // return innerHTML
