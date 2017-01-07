@@ -4,36 +4,42 @@
   <? include_once "elements/head.html" ?>
   <link rel="stylesheet" href="style/style_core.css">
   <link rel="stylesheet" href="style/style_index.css">
+  <script src="lang_lib/translateJS.js"></script>
   <script>
-    function displayName(){
-      var exampleCode = document.getElementById('exampleCode').value;
-      var name = exampleCode.replace(/แสดง\("(.+?)"\);*/g, "$1");
-      if(name != ""){
-        alert(name);
-      }
+    function runCode(codeId){
+      // raw code from codeId get translate and put into codeOutput and then copy innerText to codeHidden and then run.
+      var inputCode = document.getElementById(codeId);
+      var outputDiv = document.getElementById('codeOutput');
+      var outputHidden = document.getElementById('codeHidden');
+      outputDiv.innerHTML = translateCode(inputCode.value);
+      outputHidden.value = outputDiv.innerText;
     }
   </script>
 </head>
 <body class="background">
   <? include_once "elements/navbar.php" ?>
 
-    <div class="jumbotron">
-      <div class="container">
+  <div class="jumbotron">
+    <div class="container">
 
       <div class="row">
-        <div class="col-sm-11 col-md-offset-1" id="title_anim">
+        <div class="col-sm-11 col-md-offset-1">
           <h1>"อมรา" <small>เรียนเขียนโปรแกรมง่ายๆ ผ่านคำสั่งภาษาไทย</small></h1>
         </div>
       </div>
 
       <div class="row">
         <div class="col-md-9 col-md-offset-2">
-          <div class="input-group input-group-lg" id="control_anim">
-            <input id="exampleCode" type="text" class="form-control" placeholder='ลองพิมพ์ "แสดง("ชื่อของคุณ");" แล้วกด "Run" ดูซิ!' value='แสดง("สวัสดี...");'>
-            <span class="input-group-btn">
-              <button class="btn btn-primary" type="button" onclick="displayName();">Run <i class="fa fa-play" aria-hidden="true"></i></button>
-            </span>
-          </div>
+          <form action="runJS.php" method="post" target="_blank">
+            <div class="input-group input-group-lg" id="control_anim">
+              <input id="exampleCode" type="text" class="form-control" placeholder='ลองพิมพ์ "แสดง("ชื่อของคุณ");" แล้วกด "Run" ดูซิ!' value='แสดง("สวัสดี...");'>
+              <span class="input-group-btn">
+                <button class="btn btn-primary" type="submit" onclick="runCode('exampleCode');">Run <i class="fa fa-play" aria-hidden="true"></i></button>
+              </span>
+            </div>
+            <div id="codeOutput" style="display:none;"></div>
+            <input type="hidden" name="code" id="codeHidden">
+          </form>
         </div>
       </div>
 

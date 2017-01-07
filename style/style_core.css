@@ -24,3 +24,48 @@ a.norm:focus, a.norm:hover {
   border-radius: 3px;
   border: 1px #ddd solid;
 }
+
+@keyframes slideJumbo {
+  0% {
+    opacity: 0;
+    transform: translateY(-64px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideContainer {
+  0% {
+    opacity: 0;
+    transform: translateY(64px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideJumboHeader {
+  0%{
+    opacity: 0;
+    transform: translateX(-1em);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.jumbotron .container .row div h1 {
+  animation: slideJumboHeader 1s ease;
+}
+
+.jumbotron {
+  animation: slideJumbo 0.5s ease;
+}
+
+.container.whiteBG {
+  animation: slideContainer 0.5s ease-out;
+}
