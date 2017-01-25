@@ -8,20 +8,22 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <span class="navbar-brand">&lt;อ&gt;</span>
+      <a class="navbar-brand" herf="#">
+	    <img alt="Amara" src="img/amaralogo.svg" style="height:1.2em; filter: drop-shadow(0 0 1em white);">
+	  </a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li id="navHome"><a href="index.php"><i class="fa fa-home" aria-hidden="true"></i> หน้าแรก</a></li>
-        <li id="navLearn"><a href="learn.php"><i class="fa fa-graduation-cap" aria-hidden="true"></i> เรียน "อมรา"</a></li>
+        <!--<li id="navLearn"><a href="learn.php"><i class="fa fa-graduation-cap" aria-hidden="true"></i> เรียน "อมรา"</a></li>-->
         <li id="navCode"><a href="codeJS.php"><i class="fa fa-code" aria-hidden="true"></i> เขียนโปรแกรม</a></li>
-
+		<!--
         <li id="navTranslate" class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-exchange" aria-hidden="true"></i> แปลภาษา <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li class="disabled"><a href="#">อมรา <i class="fa fa-angle-right" aria-hidden="true"></i> Lua <!--<span class="label label-danger">Alpha</span>--></a></li>
+            <li class="disabled"><a href="#">อมรา <i class="fa fa-angle-right" aria-hidden="true"></i> Lua --><!--<span class="label label-danger">Alpha</span>--><!--</a></li>
             <li class="disabled"><a href="#">อมรา <i class="fa fa-angle-right" aria-hidden="true"></i> Python</a></li>
             <li class="disabled"><a href="#">อมรา <i class="fa fa-angle-right" aria-hidden="true"></i> Ruby</a></li>
             <!--
@@ -29,19 +31,19 @@
             <li><a href="#">Separated link</a></li>
             <li role="separator" class="divider"></li>
             <li><a href="#">One more separated link</a></li>
-            -->
+            --><!--
           </ul>
         </li>
-
-        <li id="navWB"><a href="board.php"><i class="fa fa-question-circle" aria-hidden="true"></i> Q&amp;A</a></li>
+		
+        <li id="navWB"><a href="board.php"><i class="fa fa-question-circle" aria-hidden="true"></i> Q&amp;A</a></li>-->
         <li id="navContact"><a href="https://www.facebook.com/%E0%B8%AD%E0%B8%A1%E0%B8%A3%E0%B8%B2-%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B9%80%E0%B8%82%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B9%82%E0%B8%9B%E0%B8%A3%E0%B9%81%E0%B8%81%E0%B8%A3%E0%B8%A1%E0%B8%AA%E0%B8%B3%E0%B8%AB%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%84%E0%B8%99%E0%B9%84%E0%B8%97%E0%B8%A2-1493618624012296/"><i class="fa fa-facebook-official" aria-hidden="true"></i> Fanpage</a></li>
       </ul>
-
+	  <!--
       <ul class="nav navbar-nav navbar-right">
         <li id="navAuth"><a href="#" data-toggle="modal" data-target="#loginModal"><i class="fa fa-user-circle" aria-hidden="true"></i> ลงชื่อเข้าใช้</a></li>
 
 
-        <!--
+        --><!--
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -52,8 +54,9 @@
             <li><a href="#">Separated link</a></li>
           </ul>
         </li>
-      -->
+      --><!--
       </ul>
+	  -->
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>

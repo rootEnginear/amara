@@ -7,9 +7,9 @@
   <link rel="stylesheet" href="style/style_code.css">
   <script src="lang_lib/translateJS.js"></script>
   <script>
-  var stdIoChecker; /* # */
-  var displayIoChecker;
-  var codeInputFontSize = 15;
+    var stdIoChecker;
+    var displayIoChecker;
+    var codeInputFontSize = 15;
 
     function codeZoomIn(){
       codeInputFontSize++;
@@ -75,7 +75,7 @@
                 </div>
               </div>
               <div class="col-sm-6 hidden-xs" style="height:100%;">
-                <div id="codeOutput" class="form-control" onclick="copyCode()">
+                <div id="codeOutput" class="form-control" onclick="copyCode()" data-toggle="tooltip" data-placement="bottom"  title="คลิกเพื่อเลือกโค้ดทั้งหมด">
 
                 </div>
               </div>
@@ -86,19 +86,19 @@
 
                 <form action="runJS.php" method="post" class=" pull-right" target="_blank">
                   <input type="hidden" name="code" id="codeHidden">
-                    <div class="checkbox pull-left" style="margin-right:1em;">
+                    <div class="checkbox pull-left" style="margin-right:1em;" data-toggle="tooltip" data-placement="bottom"  title="ใช้ฟังก์ชั่นของ JS โดยไม่ผ่านฟังก์ชั่น I/O ของอมรา">
                       <label class="checkbox-inline" title="แทนฟังก์ชั่นลงในหน้าต่าง Output">
                         <input type="checkbox" id="stdIoChecker" onclick="codeUpdate()"> ใช้ฟังก์ชั่น I/O
                       </label>
                     </div>
 
-                    <div class="checkbox pull-left" style="margin-right:1em;">
+                    <div class="checkbox pull-left" style="margin-right:1em;" data-toggle="tooltip" data-placement="bottom"  title="แสดงฟังก์ชั่น I/O ของอมรา">
                       <label class="checkbox-inline" title="แสดงฟังก์ชั่นในหน้าต่าง Output">
                         <input type="checkbox" id="displayIoChecker" onclick="codeUpdate()"> แสดงฟังก์ชั่น I/O
                       </label>
                     </div>
 
-                    <div class="input-group" role="group" aria-label="Zoom" style="margin-right:1em; width:10em;">
+                    <div class="input-group" role="group" aria-label="Zoom" style="margin-right:1em; width:10em;" data-toggle="tooltip"  data-placement="bottom" title="ย่อ/ขยาย">
                       <div class="input-group-btn">
                         <button type="button" class="btn btn-default" onclick="codeZoomOut()"><i class="fa fa-minus" aria-hidden="true"></i></button>
                       </div>
@@ -108,7 +108,7 @@
                       </div>
                     </div>
 
-                    <button class="btn btn-default" type="button" onclick="copyCode()" style="margin-right:1em;"><i class="fa fa-i-cursor" aria-hidden="true"></i> Select All</button>
+                    <!-- <button class="btn btn-default" type="button" onclick="copyCode()" style="margin-right:1em;"><i class="fa fa-i-cursor" aria-hidden="true"></i> Select All</button> -->
 
                     <button class="btn btn-primary" type="submit">Run <i class="fa fa-play" aria-hidden="true"></i></button>
                 </form>
@@ -123,7 +123,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-
+	<script>
+		$(document).ready(function(){
+			$('[data-toggle="tooltip"]').tooltip(); 
+		});
+	</script>
     <script>
       var codeInput = document.getElementById("codeInput");
       var codeOutput = document.getElementById("codeOutput");
