@@ -63,16 +63,16 @@
 					<div class="panel-body">
 						<div class="col-md-6">
 							<ul class="nav nav-pills nav-stacked">
-							  <li role="presentation"><a href="#">โปรแกรมสวัสดี</a></li>
-							  <li role="presentation"><a href="#">โปรแกรมตัดเกรด</a></li>
-							  <li role="presentation"><a href="#">โปรแกรมแยกตัวประกอบ</a></li>
+							  <li role="presentation"><a href="codeJS.php?p=1">โปรแกรมสวัสดี</a></li>
+							  <li role="presentation"><a href="codeJS.php?p=3">โปรแกรมตัดเกรด</a></li>
+							  <li role="presentation"><a href="codeJS.php?p=5">โปรแกรมแยกตัวประกอบ</a></li>
 							</ul>
 						</div>
 						<div class="col-md-6">
 							<ul class="nav nav-pills nav-stacked">
-							  <li role="presentation"><a href="#">โปรแกรมหาพื้นที่วงกลม</a></li>
-							  <li role="presentation"><a href="#">โปรแกรมวาดกล่องจากตัวอักษร</a></li>
-							  <li role="presentation"><a href="#">โปรแกรมแจกแจงเงินเป็นธนบัตร/เหรียญ</a></li>
+							  <li role="presentation"><a href="codeJS.php?p=2">โปรแกรมหาพื้นที่วงกลม</a></li>
+							  <li role="presentation"><a href="codeJS.php?p=4">โปรแกรมวาดกล่องสี่เหลี่ยม</a></li>
+							  <li role="presentation"><a href="codeJS.php?p=6">โปรแกรมแจกแจงเงินเป็นธนบัตร/เหรียญ</a></li>
 							</ul>
 						</div>
 					</div>
@@ -83,7 +83,7 @@
 			<div class="col-md-12">
 				<img src="img/coding_example01.PNG" alt="Example" class="img-responsive"><br>
 			</div>
-			<div class="col-md-12">
+			<div class="col-md-12 text-center">
 				<img src="img/coding_example02.PNG" alt="Result of Example" class="img-responsive"><br>
 			</div>
 		</div>
@@ -97,7 +97,7 @@
 			<div class="panel panel-default">
 			  <div class="panel-heading"><h1>สุเทพ จันทร์ชูผล<br><small>&emsp;Amara Founder</small></h1></div>
 			  <div class="panel-body">
-				<h3>"... ทุกคนควรที่จะเขียนโปรแกรมด้วยความเข้าใจ ไม่ใช่ท่องจำ ..."</h3> 
+				<h3>"... ทุกคนควรที่จะเขียนโปรแกรมด้วยความเข้าใจ ไม่ใช่ท่องจำ ..."</h3>
 				<p>&emsp;การเขียนโปรแกรมเป็นพื้นฐานที่ดีในการฝึกการคิดอย่างเป็นระบบ และช่วยให้สามารถคิดหาวิธีแก้ไขปัญหาได้อย่างเป็นขั้นเป็นตอน ผมเชื่อว่าภาษา "อมรา" จะช่วยเป็นพื้นฐานที่ดี และจะพัฒนาโปรแกรมเมอร์ชาวไทยที่มีฝีมือออกมาอีกมากมาย</p>
 			  </div>
 			</div>
@@ -131,7 +131,7 @@
   <script src="js/bootstrap.min.js"></script>
 	<script>
 		$(document).ready(function(){
-			$('[data-toggle="tooltip"]').tooltip(); 
+			$('[data-toggle="tooltip"]').tooltip();
 		});
 	</script>
   <script>

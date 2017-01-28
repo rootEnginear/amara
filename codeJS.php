@@ -1,3 +1,30 @@
+<?
+  if(isset($_GET['p'])){
+    switch ($_GET['p']) {
+      case 1: // โปรแกรมสวัสดี
+        $code = '<div>/* โปรแกรมสวัสดี */</div><div><br></div><div>ประกาศ name;</div><div>name = รับ("กรุณาใส่ชื่อ");</div><div>แสดง("สวัสดี " + name);</div>';
+        break;
+      case 2: // โปรแกรมหาพื้นที่วงกลม
+        $code = '<div>/* โปรแกรมหาพื้นที่วงกลม */</div><div><br></div><div>ประกาศ r;</div><div>ประกาศ area;</div><div>r = รับ("กรุณาใส่รัศมีวงกลม");</div><div>area = r * r * 3.14;</div><div>แสดง("พื้นที่วงกลมรัศมี " + r + " คือ " + area);</div>';
+        break;
+      case 3: // โปรแกรมตัดเกรด
+        $code = '<div>/* โปรแกรมตัดเกรด */</div><div><br></div>ประกาศ score;<div>score = รับ("กรุณาใส่คะแนน");</div><div>ถ้า(score&lt;50){</div><div>แสดง("เกรด F");</div><div>}ไม่ก็ถ้า(score&lt;60){</div><div>แสดง("เกรด D");</div><div>}ไม่ก็ถ้า(score&lt;70){</div><div>แสดง("เกรด C");</div><div>}ไม่ก็ถ้า(score&lt;80){</div><div>แสดง("เกรด B");</div><div>}ไม่ก็{</div><div>แสดง("เกรด A");</div><div>}</div>';
+        break;
+      case 4: // โปรแกรมวาดกล่องจากตัวอักษร
+        $code = '<div>/* โปรแกรมวาดกล่องสี่เหลี่ยม */</div><div><br></div><div>ประกาศ i;</div><div>ประกาศ j;</div><div>ประกาศ result = "";</div><div>ประกาศ row;</div><div>row = รับ("ใส่จำนวนแถว");</div><div>วน (i) จาก (1) ถึง (row) โดย (1){</div><div>วน (j) จาก (1) ถึง (row) โดย (1){</div><div>ถ้า(i==1 หรือ j==1 หรือ j==row หรือ i==row){</div><div>result += "0";</div><div>}ไม่ก็{</div><div>result += " &nbsp;";<br></div><div>}</div><div>}</div><div>result += "\n";</div><div>}</div><div>แสดง(result);</div>';
+        break;
+      case 5: // โปรแกรมแยกตัวประกอบ
+        $code = '<div>/* โปรแกรมแยกตัวประกอบ */</div><div><br></div><div>ประกาศ num;</div><div>ประกาศ p = 2;</div><div>num = รับ("ใส่จำนวนที่ต้องการแยกตัวประกอบ");</div><div>ประกาศ str = num + " = 1";</div><div>เมื่อ ((num&gt;1) และ (p&lt;num)) {</div><div>ถ้า(num%p==0) {</div><div>str = str + " x " + p;</div><div>num = num/p;</div><div>p=2;</div><div>} ไม่ก็ {</div><div>p +=1;</div><div>}</div><div>} //while</div><div>str = str + " x " + p // เพิ่มตัวที่ไม่ลง</div><div>แสดง(str);</div>';
+        break;
+      case 6: // โปรแกรมแจกแจงเงินเป็นธนบัตร/เหรียญ
+        $code = '<div>/* โปรแกรมแจกแจงเงินเป็นธนบัตร/เหรียญ */</div><div><br></div><div>ประกาศ save ,money, rem,&nbsp;<span>th=0, hTh</span><span>=0</span><span>, h</span><span>=0</span><span>, hH</span><span>=0</span><span>, tw</span><span>=0</span><span>, t</span><span>=0</span><span>, f</span><span>=0</span><span>, d</span><span>=0</span><span>; //1000 500 100 50 20 10 5 2</span></div><div>money = รับ("กรุณาใส่จำนวนเงิน");</div><div>save = money;</div><div>if(money&gt;1000-1){</div><div>rem = money%1000;</div><div>money -= rem;</div><div>th = money/1000;</div><div>money /= 1000;</div><div>money = money + rem - th;</div><div>}</div><div><div>if(money&gt;500-1){</div><div>rem = money%500;</div><div>money -= rem;</div><div>hTh = money/500;</div><div>money /= 500;</div><div>money = money + rem - hTh;</div><div>}</div></div><div><div>if(money&gt;100-1){</div><div>rem = money%100;</div><div>money -= rem;</div><div>h = money/100;</div><div>money /= 100;</div><div>money = money + rem - h;</div><div>}</div><div><div>if(money&gt;50-1){</div><div>rem = money%50;</div><div>money -= rem;</div><div>hH = money/50;</div><div>money /= 50;</div><div>money = money + rem - hH;</div><div>}</div><div><div>if(money&gt;20-1){</div><div>rem = money%20;</div><div>money -= rem;</div><div>tw = money/20;</div><div>money /= 20;</div><div>money = money + rem - tw;</div><div>}</div><div><div>if(money&gt;10-1){</div><div>rem = money%10;</div><div>money -= rem;</div><div>t = money/10;</div><div>money /= 10;</div><div>money = money + rem - t;</div><div>}</div><div><div>if(money&gt;5-1){</div><div>rem = money%5;</div><div>money -= rem;</div><div>f = money/5;</div><div>money /= 5;</div><div>money = money + rem - f;</div><div>}</div><div><div>if(money&gt;2-1){</div><div>rem = money%2;</div><div>money -= rem;</div><div>d = money/2;</div><div>money /= 2;</div><div>money = money + rem - d;</div><div>}</div><div>แสดง("จำนวนเงินทั้งหมด "+save+" บาท ประกอบด้วย\n &nbsp; - ธนบัตร 1000 บาท "+th+" ใบ\n &nbsp; - ธนบัตร 500 บาท "+hTh+" ใบ\n &nbsp; - ธนบัตร 100 บาท "+h+" ใบ\n &nbsp; - ธนบัตร 50 บาท "+hH+" ใบ\n &nbsp; - ธนบัตร 20 บาท "+tw+" ใบ\n &nbsp; - เหรียญ 10 บาท "+t+" เหรียญ\n &nbsp; - เหรียญ 5 บาท "+f+" เหรียญ\n &nbsp; - เหรียญ 2 บาท "+d+" เหรียญ\n &nbsp; - เหรียญ 1 บาท "+money+" เหรียญ");</div></div></div></div></div></div></div>';
+        break;
+      default:
+        $code = "";
+        break;
+    }
+  }
+?>
 <!DOCTYPE html>
 <html lang="th">
 <head>
@@ -71,7 +98,7 @@
             <div class="panel-body" id="codeArea" style="height:53vh;">
               <div class="col-sm-6 col-xs-12" style="height:100%;">
                 <div contenteditable="true" class="form-control" id="codeInput" oninput="codeUpdate()">
-
+                  <? echo $code; ?>
                 </div>
               </div>
               <div class="col-sm-6 hidden-xs" style="height:100%;">
@@ -125,7 +152,7 @@
     <script src="js/bootstrap.min.js"></script>
 	<script>
 		$(document).ready(function(){
-			$('[data-toggle="tooltip"]').tooltip(); 
+			$('[data-toggle="tooltip"]').tooltip();
 		});
 	</script>
     <script>

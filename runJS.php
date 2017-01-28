@@ -5,7 +5,7 @@
 
   <script>
   window.onerror = function(msg, url, linenumber){
-    alert('เกิดข้อผิดพลาด!\n\n'+msg+'\n\nบรรทัดที่: '+(linenumber-44));
+    alert('เกิดข้อผิดพลาด!\n\n'+msg+'\n\nบรรทัดที่: '+(linenumber-44-18));
     window.close();
     return true;
   }
@@ -41,6 +41,10 @@
 
   function output(text){
     alert(text);
+  }
+
+  function ask(text){
+    return confirm(text);
   }
 
   main();

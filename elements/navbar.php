@@ -9,7 +9,7 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" herf="#">
-	    <img alt="Amara" src="img/amaralogo.svg" style="height:1.2em; filter: drop-shadow(0 0 1em white);">
+	    <img alt="Amara" src="img/amaralogo.svg" style="height:1.3em; filter: drop-shadow(0 0 1em white);">
 	  </a>
     </div>
 
@@ -34,9 +34,9 @@
             --><!--
           </ul>
         </li>
-		
+
         <li id="navWB"><a href="board.php"><i class="fa fa-question-circle" aria-hidden="true"></i> Q&amp;A</a></li>-->
-        <li id="navContact"><a href="https://www.facebook.com/%E0%B8%AD%E0%B8%A1%E0%B8%A3%E0%B8%B2-%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B9%80%E0%B8%82%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B9%82%E0%B8%9B%E0%B8%A3%E0%B9%81%E0%B8%81%E0%B8%A3%E0%B8%A1%E0%B8%AA%E0%B8%B3%E0%B8%AB%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%84%E0%B8%99%E0%B9%84%E0%B8%97%E0%B8%A2-1493618624012296/"><i class="fa fa-facebook-official" aria-hidden="true"></i> Fanpage</a></li>
+        <li id="navContact"><a href="https://www.facebook.com/AmaraProgramming/"><i class="fa fa-facebook-official" aria-hidden="true"></i> Fanpage</a></li>
       </ul>
 	  <!--
       <ul class="nav navbar-nav navbar-right">

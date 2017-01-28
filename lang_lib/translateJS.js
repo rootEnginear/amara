@@ -23,6 +23,10 @@ function translateCode(codeInput,displayIo = false,stdIo = false) {
     codeTemp = codeTemp.replace(/แสดง/g, "output");
     codeTemp = codeTemp.replace(/#output/g, "แสดง");
 
+    /* ask*/
+    codeTemp = codeTemp.replace(/ถาม/g, "ask");
+    codeTemp = codeTemp.replace(/#ask/g, "ถาม");
+
     /* if */
     codeTemp = codeTemp.replace(/ถ้า/g, "if");
     codeTemp = codeTemp.replace(/#if/g, "ถ้า");
@@ -39,6 +43,16 @@ function translateCode(codeInput,displayIo = false,stdIo = false) {
     codeTemp = codeTemp.replace(/หรือ/g, "||");
     codeTemp = codeTemp.replace(/#&&/g, "และ");
     codeTemp = codeTemp.replace(/#\|\|/g, "หรือ");
+
+    /* switch case */
+    codeTemp = codeTemp.replace(/แบ่ง/g, "switch");
+    codeTemp = codeTemp.replace(/กรณี/g, "case");
+    codeTemp = codeTemp.replace(/อื่นๆ/g, "default");
+    codeTemp = codeTemp.replace(/case(.+);/g, "case$1; break;");
+    codeTemp = codeTemp.replace(/ต่อ; break;/g, "continue;");
+    codeTemp = codeTemp.replace(/#switch/g, "แบ่ง");
+    codeTemp = codeTemp.replace(/#case/g, "กรณี");
+    codeTemp = codeTemp.replace(/#default/g, "อื่นๆ");
 
     /* while */
     codeTemp = codeTemp.replace(/เมื่อ/g, "while");
@@ -58,6 +72,7 @@ function translateCode(codeInput,displayIo = false,stdIo = false) {
 
     /* { } */
     codeTemp = codeTemp.replace(/(\{|\})/g, "<br>$1<br>");
+    codeTemp = codeTemp.replace(/<br>(\})/g, "$1");
 
     /* comment */
     codeTemp = codeTemp.replace(/(\/\*.+?\*\/)/g, "$1<br>");
@@ -94,14 +109,24 @@ function translateCode(codeInput,displayIo = false,stdIo = false) {
     codeTemp = codeTemp.replace(/เท็จ/g, "false");
     codeTemp = codeTemp.replace(/#false/g, "เท็จ");
 
+    /* COLOR SECTION */
+
+    /* comment */
+    /*codeTemp = codeTemp.replace(/\/\*([\s\S]*?)\*\//g, '<span class="comment">$1</span>');
+    codeTemp = codeTemp.replace(/\/\/(.*)/g, '<span class="comment">$1</span>');*/
+
+    /* blockquote */
+    /*codeTemp = codeTemp.replace(/(["|'].*?["|'])/g, '<span class="blockquote">$1</span>');*/
+
     if(displayIo == true){
-      codeTemp += '<br>function input(text){<br>return prompt(text, "");<br>}<br><br>function output(text){<br>alert(text);<br>}';
+      codeTemp += '<br>function input(text){<br>return prompt(text, "");<br>}<br><br>function output(text){<br>alert(text);<br>}<br><br>function ask(text){<br>return confirm(text);<br>}';
     }
 
     if(stdIo == true){
       codeTemp = codeTemp.replace(/output\(/g, "alert\(");
       codeTemp = codeTemp.replace(/input\((".*?")\)/g, "prompt\($1, \"\"\)");
       codeTemp = codeTemp.replace(/input\(\)/g, "prompt\(\"\", \"\"\)");
+      codeTemp = codeTemp.replace(/ask\(/g, "confirm\(");
     }
 
     return codeTemp; // return innerHTML
