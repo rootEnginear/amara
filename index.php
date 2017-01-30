@@ -17,6 +17,14 @@
   </script>
 </head>
 <body class="background">
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
   <? include_once "elements/navbar.php" ?>
 
   <div class="jumbotron">
@@ -48,7 +56,41 @@
 
   <div class="container whiteBG">
     <div class="row">
-		<div class="col-md-6">
+      <div class="col-md-8">
+        <div class="col-md-12">
+  				<div class="panel panel-default">
+  					<div class="panel-heading"><img src="img/coding_example01.PNG" alt="Example" class="img-responsive center-block"></div>
+  					<div class="panel-body">
+              <h1>อมรา <small>คืออะไร?</small></h1>
+  						<p>&emsp;อมรา คือชุดคำสั่งเขียนโปรแกรมในภาษาไทยที่ใช้ภาษา JavaScript เป็นฐานหลัก โดยมีจุดประสงค์เพื่อให้การเขียนโปรแกรมนั้นสามารถเข้าใจระบบการทำงานได้ง่ายมากขึ้น และสามารถใช้เขียนโปรแกรมอย่างง่ายได้</p>
+  					</div>
+  				</div>
+  			</div>
+      </div>
+      <div class="col-md-4">
+        <div class="fb-page" data-href="https://www.facebook.com/AmaraProgramming/" data-tabs="timeline" data-height="447" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/AmaraProgramming/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/AmaraProgramming/">อมรา - เรียนเขียนโปรแกรมง่ายๆ ผ่านคำสั่งภาษาไทย</a></blockquote></div>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <h1>ตัวอย่างโปรแกรม</h1>
+            <ul class="nav nav-pills">
+              <li role="presentation"><a href="codeJS.php?p=1">โปรแกรมสวัสดี</a></li>
+              <li role="presentation"><a href="codeJS.php?p=2">โปรแกรมหาพื้นที่วงกลม</a></li>
+              <li role="presentation"><a href="codeJS.php?p=3">โปรแกรมตัดเกรด</a></li>
+              <li role="presentation"><a href="codeJS.php?p=4">โปรแกรมวาดกล่องสี่เหลี่ยม</a></li>
+              <li role="presentation"><a href="codeJS.php?p=5">โปรแกรมแยกตัวประกอบ</a></li>
+              <li role="presentation"><a href="codeJS.php?p=6">โปรแกรมแจกแจงเงินเป็นธนบัตร/เหรียญ</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!--
+		<div class="col-md-5">
 			<div class="col-md-12">
 				<div class="panel panel-default">
 					<div class="panel-heading"><h1>อมรา <small>คืออะไร?</small></h1></div>
@@ -79,7 +121,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-md-6">
+		<div class="col-md-5">
 			<div class="col-md-12">
 				<img src="img/coding_example01.PNG" alt="Example" class="img-responsive"><br>
 			</div>
@@ -87,6 +129,10 @@
 				<img src="img/coding_example02.PNG" alt="Result of Example" class="img-responsive"><br>
 			</div>
 		</div>
+    <div class="col-md-2">
+      <div class="fb-page" data-href="https://www.facebook.com/AmaraProgramming/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/AmaraProgramming/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/AmaraProgramming/">อมรา - เรียนเขียนโปรแกรมง่ายๆ ผ่านคำสั่งภาษาไทย</a></blockquote></div>
+    </div>
+    -->
 	</div>
 
     <hr>
@@ -95,7 +141,7 @@
 		<div class="col-md-4">
 			<img src="img/team_portrait_01.jpg" alt="Amara Founder" class="img-circle img-responsive"><br>
 			<div class="panel panel-default">
-			  <div class="panel-heading"><h1>สุเทพ จันทร์ชูผล<br><small>&emsp;Amara Founder</small></h1></div>
+			  <div class="panel-heading"><h1>รัชกฤช ทวีจารุภัทร<br><small>&emsp;Amara Founder</small></h1></div>
 			  <div class="panel-body">
 				<h3>"... ทุกคนควรที่จะเขียนโปรแกรมด้วยความเข้าใจ ไม่ใช่ท่องจำ ..."</h3>
 				<p>&emsp;การเขียนโปรแกรมเป็นพื้นฐานที่ดีในการฝึกการคิดอย่างเป็นระบบ และช่วยให้สามารถคิดหาวิธีแก้ไขปัญหาได้อย่างเป็นขั้นเป็นตอน ผมเชื่อว่าภาษา "อมรา" จะช่วยเป็นพื้นฐานที่ดี และจะพัฒนาโปรแกรมเมอร์ชาวไทยที่มีฝีมือออกมาอีกมากมาย</p>
@@ -113,9 +159,9 @@
 			</div>
 		</div>
 		<div class="col-md-4">
-			<img src="img/team_portrait_03.jpg" alt="ผู้พัฒนา Amara" class="img-circle img-responsive"><br>
+			<img src="img/team_portrait_03.png" alt="Application Developer" class="img-circle img-responsive"><br>
 				<div class="panel panel-default">
-			    <div class="panel-heading"><h1>รัชกฤช ทวีจารุภัทร<br><small>&emsp;Application Developer</small></h1></div>
+			    <div class="panel-heading"><h1>ธนวินท์ ธนกิจไพศาล<br><small>&emsp;Application Developer</small></h1></div>
 			    <div class="panel-body">
 					<h3>"... รอบตัวเราทุกวันนี้มีแต่โปรแกรม ..."</h3>
 					<p>&emsp;โทรศัพท์ โทรทัศน์ แม้แต่เครื่องซักผ้าของคุณเองก็ยังใช้การเขียนโปรแกรมมาเพื่อควบคุมพวกมัน ถ้าคุณไม่หัดเขียนมันตั้งแต่ตอนนี้ พรุ่งนี้คุณจะคุยกับเขา "ไม่รู้เรื่อง" //ตึ่งโป๊ะ</p>

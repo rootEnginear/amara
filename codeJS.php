@@ -36,20 +36,20 @@
   <script>
     var stdIoChecker;
     var displayIoChecker;
-    var codeInputFontSize = 15;
+    var codeInputFontSize = 20;
 
     function codeZoomIn(){
       codeInputFontSize++;
-      codeInput.style.fontSize = codeInputFontSize/10 + "em";
-      codeOutput.style.fontSize = codeInputFontSize/10 + "em";
-      zoomNumDisplay.value = codeInputFontSize/10 + "x";
+      codeInput.style.fontSize = codeInputFontSize/10 + "rem";
+      codeOutput.style.fontSize = codeInputFontSize/10 + "rem";
+      zoomNumDisplay.value = codeInputFontSize/20 + "x";
     }
 
     function codeZoomOut(){
       codeInputFontSize--;
-      codeInput.style.fontSize = codeInputFontSize/10 + "em";
-      codeOutput.style.fontSize = codeInputFontSize/10 + "em";
-      zoomNumDisplay.value = codeInputFontSize/10 + "x";
+      codeInput.style.fontSize = codeInputFontSize/10 + "rem";
+      codeOutput.style.fontSize = codeInputFontSize/10 + "rem";
+      zoomNumDisplay.value = codeInputFontSize/20 + "x";
     }
 
     function stdIo(){
@@ -92,13 +92,10 @@
       <div class="row">
         <div class="col-sm-12">
           <div class="panel panel-default" style="margin-bottom:0;">
-            <div class="panel-heading">
-              <h3 class="text-center" style="margin-top: 10px;">อมรา <i class="fa fa-angle-right" aria-hidden="true"></i> JavaScript</h3>
-            </div>
-            <div class="panel-body" id="codeArea" style="height:53vh;">
+            <div class="panel-body" id="codeArea" style="height:64vh;">
               <div class="col-sm-6 col-xs-12" style="height:100%;">
                 <div contenteditable="true" class="form-control" id="codeInput" oninput="codeUpdate()">
-                  <? echo $code; ?>
+                  <? echo $code ?>
                 </div>
               </div>
               <div class="col-sm-6 hidden-xs" style="height:100%;">
@@ -114,13 +111,13 @@
                 <form action="runJS.php" method="post" class=" pull-right" target="_blank">
                   <input type="hidden" name="code" id="codeHidden">
                     <div class="checkbox pull-left" style="margin-right:1em;" data-toggle="tooltip" data-placement="bottom"  title="ใช้ฟังก์ชั่นของ JS โดยไม่ผ่านฟังก์ชั่น I/O ของอมรา">
-                      <label class="checkbox-inline" title="แทนฟังก์ชั่นลงในหน้าต่าง Output">
-                        <input type="checkbox" id="stdIoChecker" onclick="codeUpdate()"> ใช้ฟังก์ชั่น I/O
+                      <label class="checkbox-inline" title="ใช้ฟังก์ชั่นของ JS โดยไม่ผ่านฟังก์ชั่น I/O ของอมรา">
+                        <input type="checkbox" id="stdIoChecker" onclick="codeUpdate()" checked> ใช้ฟังก์ชั่น I/O
                       </label>
                     </div>
 
                     <div class="checkbox pull-left" style="margin-right:1em;" data-toggle="tooltip" data-placement="bottom"  title="แสดงฟังก์ชั่น I/O ของอมรา">
-                      <label class="checkbox-inline" title="แสดงฟังก์ชั่นในหน้าต่าง Output">
+                      <label class="checkbox-inline" title="แสดงฟังก์ชั่น I/O ของอมรา">
                         <input type="checkbox" id="displayIoChecker" onclick="codeUpdate()"> แสดงฟังก์ชั่น I/O
                       </label>
                     </div>
@@ -129,7 +126,7 @@
                       <div class="input-group-btn">
                         <button type="button" class="btn btn-default" onclick="codeZoomOut()"><i class="fa fa-minus" aria-hidden="true"></i></button>
                       </div>
-                      <input id="zoomNum" type="text" class="form-control text-center" readonly value="1.5x">
+                      <input id="zoomNum" type="text" class="form-control text-center" readonly value="1x">
                       <div class="input-group-btn">
                         <button type="button" class="btn btn-default" onclick="codeZoomIn()"><i class="fa fa-plus" aria-hidden="true"></i></button>
                       </div>

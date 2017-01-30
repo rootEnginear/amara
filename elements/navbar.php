@@ -36,7 +36,9 @@
         </li>
 
         <li id="navWB"><a href="board.php"><i class="fa fa-question-circle" aria-hidden="true"></i> Q&amp;A</a></li>-->
-        <li id="navContact"><a href="https://www.facebook.com/AmaraProgramming/"><i class="fa fa-facebook-official" aria-hidden="true"></i> Fanpage</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li id="navContact"><a href="https://www.facebook.com/AmaraProgramming/"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
       </ul>
 	  <!--
       <ul class="nav navbar-nav navbar-right">
