@@ -1,4 +1,10 @@
 # Amara
-Learn programming by Thai function.
+Let's program in Thai
 
-One of the major problem when Thais try to program is, they don't actually know what are they writing. Because of that, we are going to try to translate most of the basic JavaScript function into Thai, and make the syntax as much easy as we could.
+This project is inspired by the fact that, we have to program in English. So, wouldn't it be fun to program in Thai language?
+
+## How does it work?
+It just find-and-replace things :neutral_face: There's nothing beyond that.
+
+## More languages?
+Yeah! It would be fun!
