@@ -1,4 +1,4 @@
-var i = 0;
+﻿var i = 0;
 
 function translateCode(codeInput,displayIo = false,stdIo = false) {
     var codeTemp = codeInput; // get innerText
@@ -116,7 +116,11 @@ function translateCode(codeInput,displayIo = false,stdIo = false) {
     codeTemp = codeTemp.replace(/\/\/(.*)/g, '<span class="comment">$1</span>');*/
 
     /* blockquote */
-    /*codeTemp = codeTemp.replace(/(["|'].*?["|'])/g, '<span class="blockquote">$1</span>');*/
+    codeTemp = codeTemp.replace(/(["|'].*?["|'])/g, '<span class="blockquote">$1</span>');
+
+    /* true false */
+    codeTemp = codeTemp.replace(/(true)/g, '<span class="boolean">$1</span>');
+    codeTemp = codeTemp.replace(/(false)/g, '<span class="boolean">$1</span>');
 
     if(displayIo == true){
       codeTemp += '<br>function input(text){<br>return prompt(text, "");<br>}<br><br>function output(text){<br>alert(text);<br>}<br><br>function ask(text){<br>return confirm(text);<br>}';

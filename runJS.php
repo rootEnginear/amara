@@ -2,7 +2,6 @@
 <html lang="th">
 <head>
   <? include_once "elements/head.html" ?>
-
   <script>
   window.onerror = function(msg, url, linenumber){
     alert('เกิดข้อผิดพลาด!\n\n'+msg+'\n\nบรรทัดที่: '+(linenumber-44-18));

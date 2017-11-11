@@ -1,3 +1,34 @@
+<?php
+/*
+$host='localhost';
+$user='kruchoti';
+$pass='19Shr0s1jL';
+$dbname = 'kruchoti_robot';
+$c = @mysql_connect($host,$user,$pass);
+if(!$c){
+  ?>
+  <script>
+    console.log("Error: Can't connect database.");
+  </script>
+  <?php
+}else{
+  $sql = "select * from proj_counter where id=0";
+  $c = mysql_db_query($dbname,$sql);
+  $record = mysql_fetch_array($c);
+  $user_count = $record['amara'] + 1;
+  $sql = "update proj_counter set amara='$user_count' where id=0";
+  $c = mysql_db_query($dbname,$sql);
+  if(!$c){
+    ?>
+    <script>
+      console.log("Error: Can't update data.");
+    </script>
+    <?php
+  }
+}
+*/
+?>
+
 <nav id="navbarTop" class="navbar navbar-inverse navbar-fixed-top">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -92,8 +123,4 @@
   </div>
 </div>
 
-<nav id="navbarFooter" class="navbar navbar-default navbar-fixed-bottom hidden-xs">
-  <div class="container">
-    <p class="navbar-text navbar-right">Copyright &copy; <?php date_default_timezone_set("Asia/Bangkok"); echo date("Y"); ?> "kruchotika.com" All right reserved.</p>
-  </div>
-</nav>
+
